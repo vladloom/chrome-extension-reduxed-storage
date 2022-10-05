@@ -10,11 +10,11 @@
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "babel-loader": "^8.0.4",
+    "@babel/preset-env": "^7.19.3",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.6.0",
-    "core-js": "^2.5.7",
+    "core-js": "^3.25.5",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
@@ -22,5 +22,18 @@
     "webpack-chrome-extension-reloader": "^0.8.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.9",
+    "@babel/preset-typescript": "^7.18.6",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@types/chrome": "^0.0.197",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "esbuild-loader": "^2.20.0",
+    "redux": "^4.2.0",
+    "reduxed-chrome-storage": "^3.0.5"
   }
 }

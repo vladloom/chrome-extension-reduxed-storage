@@ -22,7 +22,7 @@ let config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -34,6 +34,9 @@ let config = {
         exclude: /node_modules/
       }
     ]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
   },
   plugins: [
     new CleanWebpackPlugin([buildDir]),
@@ -72,16 +75,6 @@ let config = {
 
 if (!isProd) {
   config.devtool = 'source-map'
-  config.plugins.push(
-    new ChromeExtensionReloader({
-      entries: {
-        options: 'options',
-        popup: 'popup',
-        content: 'content',
-        background: 'background',
-      }
-    })
-  )
 }
 
 module.exports = config
